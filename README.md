@@ -16,6 +16,11 @@ sudo ./haftian /where/is/your.iso.file /where/you/mount/your/usb.disk
 
 4. Reboot and try
 
+## Format USB Disk
+
+0. Assumption your USB Disk in /dev/sdb
+1. Run `ngAftian.sh`
+
 # LICENSE
 
 haftian is in public domain but it contains files from GRUB which are licensed in GPL3.
@@ -31,12 +36,12 @@ This is how I prepare my USB disk. Note that `#` is Linux prompt and `(parted)` 
 (parted) mktable gpt
 (parted) mkpart efi fat32 1 -1
 (parted) toggle 1 boot
-(parted) p 
+(parted) p
 Model: SanDisk Ultra (scsi)
 Disk /dev/sdb: 8004MB
 Sector size (logical/physical): 512B/512B
 Partition Table: gpt
-Disk Flags: 
+Disk Flags:
 
 Number  Start   End     Size    File system  Name  Flags
  1      1049kB  8004MB  8003MB  fat32        efi   boot, esp
